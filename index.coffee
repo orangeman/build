@@ -11,7 +11,7 @@ module.exports = (what) ->
     append: (file) ->
       out.write fs.readFileSync file
     browserify: (f, opt) ->
-      exec "./node_modules/coffee-script/bin/coffee -c " + tmp + ".coffee", (e, o) ->
+      exec "coffee -c " + tmp + ".coffee", (e, o) ->
         browserify = require('browserify')
         b = browserify debug: true
         if opt && (opt.mini || opt.minify)

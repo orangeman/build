@@ -18,7 +18,7 @@
         return out.write(fs.readFileSync(file));
       },
       browserify: function(f, opt) {
-        return exec("./node_modules/coffee-script/bin/coffee -c " + tmp + ".coffee", function(e, o) {
+        return exec("coffee -c " + tmp + ".coffee", function(e, o) {
           var b, browserify;
           browserify = require('browserify');
           b = browserify({
